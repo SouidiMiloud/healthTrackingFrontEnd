@@ -1,0 +1,46 @@
+.patients_wrapper{
+    width: 100%;
+    position: relative;
+    top: 5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.patients_wrapper table{
+    width: 95%;
+    text-align: center;
+    font-size: 20px;
+    border-collapse: collapse;
+    border-radius: 6px;
+    box-shadow: 1px 1px 10px 0px #333;
+}
+
+.patients_wrapper thead tr{
+    background-color: #2C5E70;
+    color: #fff;
+    height: 4rem;
+}
+
+tbody td a {
+    text-decoration: none;
+    font-style: italic;
+    color: #166;
+    padding: 0.6rem;
+    border: solid 1px #166;
+    border-radius: 5px;
+}
+tbody td a:hover{
+    cursor: pointer;
+    background-color: #166;
+    color: white;
+}
+
+tbody tr:nth-child(even){
+    background-color: #F2F2F2;
+    height: 3.5rem;
+}
+tbody tr:nth-child(odd){
+    background-color: #FFFFFF;
+    height: 3.5rem;
+}

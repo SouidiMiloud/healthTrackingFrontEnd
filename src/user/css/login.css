@@ -1,0 +1,71 @@
+.log_wrapper{
+    width: 32em;
+    height: 30em;
+    border-radius: 10px;
+    background-color: #F5F5F5;
+    position: relative;
+    top: 4em;
+    display: flex;
+    justify-content: center;
+    box-shadow: 1px 1px 4px 0px #333;
+}
+
+.log_inputField{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.7em;
+}
+.log_inputField input{
+    width: 25rem;
+    height: 3.3rem;
+    border-radius: 8px;
+    border-width: 1px;
+    outline: none;
+    padding-left: 0.5rem;
+    font-size: 22px;
+    box-shadow: 1px 1px 3px 0px #366;
+}
+.log_inputField label{
+    color: #333;
+    font-size: 18px;
+}
+
+.log_wrapper button{
+    width: 15rem;
+    height: 3.3rem;
+    border: none;
+    border-radius: 15px;
+    background-color: #36A2EB;
+    color: #333;
+    font-size: 20px;
+    margin-top: 5rem;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+.log_wrapper button:hover{
+    cursor: pointer;
+    background-color: #4DA1FF;
+    color: #000;
+}
+
+.forgot_pwd{
+    color: #333;
+    margin-top: -0.5rem;
+    display: flex;
+    width: 25rem;
+    justify-content: space-around;
+}
+
+.link{
+    color: #333;
+    font-size: 16px;
+}
+.link:hover{
+    transform: scale(1.05);
+}
+
+.log_h2{
+    position: absolute;
+    color: #245;
+    margin-left: 3rem;
+}

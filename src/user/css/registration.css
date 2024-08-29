@@ -1,0 +1,57 @@
+.reg_wrapper{
+    width: 50em;
+    height: 30em;
+    border-radius: 15px;
+    background-color: #FFFFFF;
+    position: relative;
+    top: 5em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    box-shadow: 1px 1px 3px 0px #333;
+}
+
+.reg_inputField{
+    display: flex;
+    flex-direction: column;
+}
+.reg_inputField input{
+    width: 20rem;
+    height: 3rem;
+    border-radius: 10px;
+    border-width: 1px;
+    outline: none;
+    padding-left: 0.5rem;
+    font-size: 20px;
+    box-shadow: 1px 1px 3px 0px #366;
+}
+.reg_inputField label{
+    color: #333;
+    font-size: 18px;
+    margin-top: 1.2rem;
+}
+
+.reg_submit_btn{
+    width: 15rem;
+    height: 3rem;
+    border: none;
+    border-radius: 15px;
+    background-color: #36A2EB;
+    color: #333;
+    font-size: 18px;
+    margin-top: 0.5rem;
+    position: absolute;
+    bottom: 1em;
+}
+.reg_submit_btn:hover{
+    cursor: pointer;
+    background-color: #4DA1FF;
+    color: #000;
+}
+
+h2{
+    position: absolute;
+    top: 0;
+    color: #245;
+    margin-bottom: 40px;
+}
