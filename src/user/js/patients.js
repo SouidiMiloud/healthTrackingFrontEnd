@@ -21,6 +21,7 @@ const Patients = () => {
     return (
         <>
         <Navbar/>
+
         <div className="patients_wrapper">
           <table>
             <thead>
@@ -33,7 +34,7 @@ const Patients = () => {
               </tr>
             </thead>
             <tbody>
-              {patients.map(patient=>(
+              {patients && patients.map(patient=>(
               <tr>
                 <td>{patient.firstName}</td>
                 <td>{patient.lastName}</td>

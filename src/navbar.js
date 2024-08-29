@@ -29,7 +29,8 @@ const Navbar = (props)=>{
     useEffect(()=>{
       const path = window.location.pathname;
       const buttonMap = {
-        '/': 'home'
+        '/': 'home',
+        '/patients': 'patients',
       };
       setActiveButton(buttonMap[path]);
     });

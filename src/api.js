@@ -1,15 +1,17 @@
 function fetchData(url, requestMethod, requestBody, contentType){
 
     const info = {
-        headers:{
-            "Content-Type": contentType,
-        },
+        headers:{},
         method: requestMethod
     }
     if(info.method == 'POST'){
-        if(info.headers["Content-Type"] == "application/json")
+        if(contentType == "application/json"){            
+            info.headers['Content-Type'] = contentType;
             info.body = JSON.stringify(requestBody);
-        else info.body = requestBody;
+        }
+        else{            
+            info.body = requestBody;
+        }
     }
     if(localStorage.getItem('jwt'))
         info.headers.Authorization = `Bearer ${localStorage.getItem('jwt')}`;
