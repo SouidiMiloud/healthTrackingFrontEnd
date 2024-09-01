@@ -9,9 +9,11 @@ const Medication = () => {
   const {patientId, id} = useParams();
   const [medication, setMedication] = useState({})
 
-  fetchData(`/api/patients/${patientId}/medications/${id}`, 'GET', null, 'application/json')
-  .then(data => setMedication(data))
-  .catch(error => console.error("error fetching medication ", error));
+  useEffect(() => {
+    fetchData(`/api/patients/${patientId}/medications/${id}`, 'GET', null, 'application/json')
+    .then(data => setMedication(data))
+    .catch(error => console.error("error fetching medication ", error));
+  }, []);
 
   return (
     <>

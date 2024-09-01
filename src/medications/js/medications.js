@@ -38,7 +38,9 @@ const Medications = () => {
                   <p className="my-card-title">{med.name}</p>
                   <p className="my-card-description">{med.form}</p>
                   <p className="my-card-description">{med.price} $</p>
-                  <button className="delete-btn" onClick={() => deleteMedication(med.id)}>DELETE</button>
+                  {localStorage.getItem('role') == 'DOCTOR' &&
+                    <button className="delete-btn" onClick={() => deleteMedication(med.id)}>DELETE</button>
+                  }
                 </div>
               </div>
             </a>

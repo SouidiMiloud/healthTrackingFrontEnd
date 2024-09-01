@@ -1,5 +1,7 @@
 body{
-    background-color: #fff;
+    background: url('../public/uploads/medications_bg.PNG') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 .home_wrapper{
@@ -15,6 +17,7 @@ body{
     font-family: 'Courier New', Courier, monospace; 
     white-space: pre; 
     display: inline-block;
+    color: white;
 }
 .letter {
     display: inline-block;

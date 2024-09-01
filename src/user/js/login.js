@@ -19,8 +19,8 @@ const Login = ()=>{
         fetchData('/api/auth/login', 'POST', credentials, 'application/json')
         .then(data => {
           localStorage.setItem('jwt', data.token);
-          localStorage.setItem('name', data.user.firstName + " " + data.user.lastName);
-          localStorage.setItem('username', credentials.username);
+          localStorage.setItem('role', data.user.appUserRole);
+          localStorage.setItem('id', data.user.id);
           window.location.href = '/';
         })
       }

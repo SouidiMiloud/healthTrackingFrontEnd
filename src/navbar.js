@@ -23,6 +23,7 @@ const Navbar = (props)=>{
       localStorage.removeItem('jwt');
       localStorage.removeItem('name');
       localStorage.removeItem('username');
+      localStorage.removeItem('role');
       window.location.href='/';
     }
 
@@ -31,6 +32,7 @@ const Navbar = (props)=>{
       const buttonMap = {
         '/': 'home',
         '/patients': 'patients',
+        '/medications': 'medications',
       };
       setActiveButton(buttonMap[path]);
     });
@@ -39,7 +41,12 @@ const Navbar = (props)=>{
       <>
         <div className="custom_nav">
           <button className="nav_btn" style={activeButton==='home'?active:{}} onClick={(e)=>clickButton('/', e)}>HOME</button>
-          <button className="nav_btn" style={activeButton==='patients'?active:{}} onClick={(e)=>clickButton('/patients', e)}>PATIENTS</button>
+          {localStorage.getItem('role') == 'DOCTOR' &&
+            <button className="nav_btn" style={activeButton==='patients'?active:{}} onClick={(e)=>clickButton('/patients', e)}>PATIENTS</button>
+          }
+          {localStorage.getItem('role') == 'PATIENT' &&
+            <button className="nav_btn" style={activeButton==='medications'?active:{}} onClick={(e)=>clickButton(`/medications/${localStorage.getItem('id')}`, e)}>MEDICATIONS</button>
+          }
         </div>
         <div className="drop_div">
             <button
